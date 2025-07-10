@@ -50,58 +50,45 @@ const skills = [
 
 const Skills = () => {
   return (
+    
     <section
       id="skills"
       style={{
-        paddingTop: "10px",
+        paddingTop: "80px",
         minHeight: "100vh",
-        background: "linear-gradient(to right, #0f0f1c, #1e1e35)",
+  background: "linear-gradient(to right, #0f0f1c, #1e1e35)",
         color: "#fff"
       }}
     >
+      <h1 style={{ color: "red" }}>Test Version</h1>
       <Box sx={{ maxWidth: "1200px", mx: "auto", px: 3, py: 5 }}>
-        <Typography
-          variant="h3"
-          sx={{
-            fontWeight: "bold",
-            textAlign: { xs: "center", sm: "right" },
-            mb: 2,
-            mr: { xs: 0, sm: "40px", md: "180px" }
-          }}
-        >
-          Skills
-        </Typography>
-
-        <Typography
+      <Typography
+  variant="h3"
+     sx={{ fontWeight: "bold", textAlign: "right", mb: 2 , marginRight:"180px" }} 
+>
+  Skills
+</Typography>
+<Typography
           variant="subtitle1"
-          sx={{
-            textAlign: { xs: "center", sm: "right" },
-            mb: 6,
-            color: "#bbb",
-            mr: { xs: 0, sm: "40px", md: "180px" }
-          }}
+          sx={{ textAlign: "right", mb: 6 , color: "#bbb", marginRight:"180px" }}
         >
-          TECHNOLOGIES I USE TO BUILD MODERN FULL-STACK WEB APPLICATIONS
+           TECHNOLOGIES I USE TO BUILD MDERN FULL-STACK WEB APPLICATION
         </Typography>
 
-        <Grid container spacing={4} justifyContent="center">
+        <Grid container spacing={5} justifyContent="center">
           {skills.map((skill, index) => (
-            <Grid item xs={6} sm={4} md={2.4} key={index}>
-              <Box
-                sx={{
-                  textAlign: "center",
-                  p: 2,
-                  animation: `${fadeIn} 0.5s ease-in-out ${index * 0.1}s both`,
-                  transform: "scale(1.1)",
-                  boxShadow: "2px 8px 20px rgb(250, 248, 247)",
-                  borderRadius: "",
-                  transition: "transform 0.4s, box-shadow 0.4s",
-                  "&:hover": {
-                    transform: "scale(1.15)",
-                    boxShadow: "0 8px 28px rgba(0, 191, 255, 0.4)"
-                  }
-                }}
-              >
+            <Grid item xs={4} sm={3} md={2} key={index}>
+             <Box
+  sx={{
+    textAlign: "      ",
+    p: 1,
+    animation: `${fadeIn} 0.5s ease-in-out ${index * 0.1}s both`,
+    transform: "scale(1.1)", // always scaled
+    boxShadow: "2PX 8px 20px rgb(238, 229, 222)", // always glowing
+    transition: "transform 0.4s, box-shadow 0.4s"
+  }}
+>
+
                 <Box
                   sx={{
                     fontSize: "3rem",
@@ -131,4 +118,4 @@ const Skills = () => {
   );
 };
 
-export default Skills;
+export default Skills; 

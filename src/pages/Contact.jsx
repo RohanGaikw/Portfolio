@@ -55,26 +55,27 @@ const Contact = () => {
       style={{
         background: "linear-gradient(to right, #0f0f1c, #1e1e35)",
         color: "#fff",
-        padding: "40px 10px",
+        padding: "40px 20px",
         minHeight: "70vh",
       }}
     >
       <Container maxWidth="lg">
         <Typography
-          variant="h3"
-          sx={{ fontWeight: "bold", textAlign: "right", mb: 2, marginRight: "150px" }}
-        >
-          Contact Me
-        </Typography>
+                      variant="h3"
+                      sx={{ fontWeight: "bold", textAlign: "right", mb: 2 , marginRight:"150px"}}
+                    >
+                     Contact Me
+                    </Typography>
 
         <Typography
           variant="subtitle1"
-          sx={{ mb: 6, textAlign: "right", marginRight: '150px' }}
+        sx={{ mb: 6,   textAlign: "right" , marginRight:'150px' }}
         >
           HAVE A QUESTION OR WANT TO WORK TOGETHER? SEND ME A MESSAGE!
         </Typography>
 
         <Grid container spacing={6} alignItems="flex-start">
+          {/* Left: Form */}
           <Grid item xs={12} md={6}>
             <Paper
               elevation={3}
@@ -152,87 +153,93 @@ const Contact = () => {
             </Paper>
           </Grid>
 
+          {/* Right: Info & Social */}
           <Grid item xs={12} md={6} data-aos="fade-left">
-            <Box
-              sx={{
-                mb: 4,
-                backgroundColor: "#1e1e35",
-                p: 3,
-                borderRadius: 2,
-                boxShadow: "0px 4px 20px rgba(0, 191, 255, 0.1)",
-              }}
-            >
-              <Box display="flex" alignItems="center" mb={4}>
-                <Email sx={{ color: "#00bfff", mr: 2, fontSize: 28 }} />
-                <Typography sx={{ color: "#ddd", fontSize: "1rem" }}>
-                  gaikwadrohan8916@email.com
-                </Typography>
-              </Box>
+           <Box
+  sx={{
+    mb: 4,
+    backgroundColor: "#1e1e35",
+    p: 3,
+    borderRadius: 2,
+    boxShadow: "0px 4px 20px rgba(0, 191, 255, 0.1)"
+  }}
+>
+  {/* Email */}
+  <Box display="flex" alignItems="center" mb={4}>
+    <Email sx={{ color: "#00bfff", mr: 2, fontSize: 28 }} />
+    <Typography sx={{ color: "#ddd", fontSize: "1rem" }}>
+      gaikwadrohan8916@email.com
+    </Typography>
+  </Box>
 
-              <Box display="flex" alignItems="center" mb={4}>
-                <Phone sx={{ color: "#00bfff", mr: 2, fontSize: 28 }} />
-                <Typography sx={{ color: "#ddd", fontSize: "1rem" }}>
-                  +91 9322132972
-                </Typography>
-              </Box>
+  {/* Phone */}
+  <Box display="flex" alignItems="center" mb={4}>
+    <Phone sx={{ color: "#00bfff", mr: 2, fontSize: 28 }} />
+    <Typography sx={{ color: "#ddd", fontSize: "1rem" }}>
+      +91 9322132972
+    </Typography>
+  </Box>
 
-              <Box display="flex" alignItems="center">
-                <LocationOn sx={{ color: "#00bfff", mr: 2, fontSize: 28 }} />
-                <Typography sx={{ color: "#ddd", fontSize: "1rem" }}>
-                  Pune, Maharashtra ,India
-                </Typography>
-              </Box>
-            </Box>
+  {/* Location */}
+  <Box display="flex" alignItems="center">
+    <LocationOn sx={{ color: "#00bfff", mr: 2, fontSize: 28 }} />
+    <Typography sx={{ color: "#ddd", fontSize: "1rem" }}>
+      Pune, Maharashtra ,India
+    </Typography>
+  </Box>
+</Box>
 
-            <Typography
-              variant="subtitle1"
-              sx={{
-                mt: 9,
-                fontWeight: "bold",
-                fontSize: "1.2rem",
-                color: "#bbb",
-                fontFamily: "'Segoe UI', sans-serif",
-                textAlign: "center",
-                letterSpacing: "1px",
-              }}
-            >
-              ── Connect with me ──
-            </Typography>
+         <Typography
+  variant="subtitle1"
+  sx={{
+    mt: 9,
+    fontWeight: "bold",
+    fontSize: "1.2rem",
+    color: "#bbb",
+    fontFamily: "'Segoe UI', sans-serif", // 'revert-layer' isn't a real font family
+    textAlign: "center",
+    letterSpacing: "1px",
+  }}
+>
+  ── Connect with me ──
+</Typography>
 
-            <Box
-              display="flex"
-              gap={4}
-              flexWrap="wrap"
-              sx={{
-                mt: 3,
-                justifyContent: "center",
-                alignItems: "center",
-                px: 2,
-              }}
-            >
-              {socialLinks.map((item, idx) => (
-                <IconButton
-                  key={idx}
-                  href={item.url}
-                  target="_blank"
-                  sx={{
-                    backgroundColor: item.color,
-                    color: "#fff",
-                    width: 50,
-                    height: 50,
-                    borderRadius: "12px",
-                    transition: "all 0.3s ease-in-out",
-                    boxShadow: "0 4px 10px rgba(0, 0, 0, 0.3)",
-                    "&:hover": {
-                      transform: "scale(1.1)",
-                      boxShadow: "0 6px 14px rgba(0, 0, 0, 0.5)",
-                    },
-                  }}
-                >
-                  {item.icon}
-                </IconButton>
-              ))}
-            </Box>
+<Box
+  display="flex"
+  gap={4}
+  flexWrap="wrap"
+  sx={{
+    mt: 3,
+    justifyContent: "center",
+    alignItems: "center",
+    px: 2,
+  }}
+>
+  {socialLinks.map((item, idx) => (
+    <IconButton
+      key={idx}
+      href={item.url}
+      target="_blank"
+      sx={{
+        backgroundColor: item.color,
+        color: "#fff",
+        width: 50,
+        height: 50,
+        borderRadius: "12px",
+        transition: "all 0.3s ease-in-out",
+        boxShadow: "0 4px 10px rgba(0, 0, 0, 0.3)",
+        "&:hover": {
+          transform: "scale(1.1)",
+          boxShadow: "0 6px 14px rgba(0, 0, 0, 0.5)",
+        },
+      }}
+    >
+      {item.icon}
+    </IconButton>
+  ))}
+</Box>
+
+
           </Grid>
         </Grid>
       </Container>
@@ -241,3 +248,6 @@ const Contact = () => {
 };
 
 export default Contact;
+
+
+   
