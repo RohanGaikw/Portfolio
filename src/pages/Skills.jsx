@@ -60,7 +60,7 @@ const Skills = () => {
         color: "#fff"
       }}
     >
-      <h1 style={{ color: "red" }}>Test Version</h1>
+    
       <Box sx={{ maxWidth: "1200px", mx: "auto", px: 3, py: 5 }}>
       <Typography
   variant="h3"
